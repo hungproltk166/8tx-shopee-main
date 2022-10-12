@@ -761,5 +761,130 @@ margin: 0 8px;
     font-size: 1.4rem;
     color: var(--text-color);
     line-height: 38px;
+ } 
+ .app__container {
+    background-color: rgb(248, 244, 244);
  }
+ .app__content {
+    padding-top: 24px;
+ }
+ .category {
+    background-color: var(--white-color);
+    border-radius: 2px;
+ }
+ .category__heading {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 10px 16px ;
+    border-bottom:1px solid #ccc;
+    margin-top:0;
+ }
+ .category__heading-icon{
+    font-size: 1.4rem;
+    margin-right: 4px;
+    position: relative;
+    top: -1px;
+ }
+ .category-list {
+    padding:0 0 8px 0;
+    list-style: none;
+    margin-left: 15px;
+ }
+ .category-item {
+
+ }
+ .category-item--active .category-item__link {
+    color: var(--primary-color);
+ }
+ .category-item--active .category-item__link::before {
+    top: 50%;
+    left: 4px;
+    position: absolute;
+    content:"";
+    border: 4px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--primary-color);
+    transform: translateY(-50%);
+ }
+ .category-item__link {
+    position: relative;
+    padding:4px 16px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    right: 0;
+    transition: right linear 0.2s;
+ }
+ .category-item__link:hover {
+    right: -4px;
+    color: var(--primary-color);
+ }
+ /* home sort fillter */
+.home-filter {
+    
+    display: flex;
+    background-color: rgba(0 ,0 ,0 ,0.05);
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+}
+.home-filter__label {
+    font-size: 1.4rem;
+    color: #555;
+    margin-right: 16px;
+}
+
+.home-filter__btn {
+    margin-right: 12px;
+    min-width: 90px;
+}
+.home-filter__page {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+}
+.home-filter__page-num {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+.home-filter__page-current 
+{color: var(--primary-color);
+}
+.home-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 32px;
+}
+.home-filter__page-btn {
+    flex: 1;
+    background-color: var(--white-color);
+    display: flex;
+    text-decoration: none;
+}
+.home-filter__page-btn:nth-child(1){
+    border-right:1px solid #eee;
+}
+.home-filter__page-icon {
+    margin: auto;
+    color: #555;
+    font-size: 1.4rem;
+}
+.home-filter__page-btn--disabled {
+    background-color: #f9f9f9;
+    cursor: default;
+
+}
+.home-filter__page-btn--disabled .home-filter__page-icon {
+    color: #ccc;
+}
+.home-filter__page-control {
+    box-shadow:0px 2px 5px #ccc;
+}
+    
+
+
 

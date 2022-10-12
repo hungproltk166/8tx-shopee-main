@@ -256,13 +256,13 @@
 
     </div>
    </header>
-    <div class="container">
+    <div class="app__container">
        <div class="grid">
-        <div class="grid__row">
+        <div class="grid__row app__content">
             <div class="grid__column-2">
                 <nav class="category">
-                    <h3 class="category__heading">
-                        <i class="fa-solid fa-list"></i>
+                    <h3 class=" category__heading">
+                        <i class="category__heading-icon fa-solid fa-list"></i>
                         Danh mục
                     </h3>
                     <ul class="category-list">
@@ -279,7 +279,83 @@
                 </nav>
             </div>
             <div class="grid__column-10">
-
+                <div class="home-filter">
+                    <span class="home-filter__label">sắp xếp theo</span>
+                    <button class="home-filter__btn btn">phổ biến</button>
+                    <button class="home-filter__btn btn btn--primary ">mới nhất</button>
+                    <button class="home-filter__btn btn">bán chạy</button>
+                    <div class="select-input">
+                        <span class="select-input__label">Giá</span>
+                        <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                        <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link">Giá :thấp đến cao</a>
+                                                                     
+                                </li>
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link">Giá :cao đến thấp</a>
+                                                                     
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="home-filter__page">
+                        <span class="home-filter__page-num">
+                            <span class="home-filter__page-current">1</span>/14                            
+                        </span>
+                        <div class="home-filter__page-control">
+                            <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                               <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                            </a>
+                            <a href="" class="home-filter__page-btn">
+                                <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-product">
+                    <div class="grid__row">
+                        <div class="grid__column-2">
+                            <!-- product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img" style="background-image: url(https://vn.images.search.yahoo.com/images/view;_ylt=Awr1Tp1V80ZjEmgQ_wBtUwx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzc2YTNjN2ZhMWI3YTg1ZGY5MjlmYzQ1ZjFjZjE3NThmBGdwb3MDMQRpdANiaW5n?back=https%3A%2F%2Fvn.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dxe4%26type%3DE211VN714G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D1&w=1200&h=801&imgurl=www.adorama.com%2Falc%2Fwp-content%2Fuploads%2F2021%2F02%2FFront-Quarter.jpg&rurl=https%3A%2F%2Fwww.adorama.com%2Falc%2Ffujifilm-xe4-review-with-cooper-naitove%2F&size=88.3KB&p=xe4&oid=76a3c7fa1b7a85df929fc45f1cf1758f&fr2=piv-web&fr=mcafee&tt=Fujifilm+XE4%3A+Hands-On+Review+with+Cooper+Naitove&b=0&ni=21&no=1&ts=&tab=organic&sigr=eYuzVaLqKc0q&sigb=U_JjUxaH9xx7&sigi=aqJXgZ5Eym29&sigt=sZb7uafs75KN&.crumb=dNAVsQTXO4/&fr=mcafee&fr2=piv-web&type=E211VN714G0);"></div>
+                                <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10</h5>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">19.000.000đ</span>
+                                    <span class="home-product-item__price-current">20.000.000đ</span>
+                                </div>
+                                <div class="home-product-item__action">
+                                    <span class="home-product-item__like">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <!-- <i class="fa-solid fa-heart"></i> -->
+                                    </span>
+                                    <div class="home-product-item__rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="home-product-item__origin">
+                                    <span class="home-product-item__brand">
+                                        fujifilm
+                                    </span>
+                                    <span class="home-product-item__origin-name">
+                                        Nhật bản
+                                    </span>
+                                </div>
+                                <div class="home-product-item__favourite">
+                                    <i class="fa-solid fa-check"></i>
+                                    yêu thích
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">10%</span>
+                                    <span class="home-product-item__sale-off-label">Giảm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
        </div>
