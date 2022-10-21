@@ -494,6 +494,7 @@ margin: 0 0 0 4px;
 }
 .header__mobile-search {
     padding:0 12px;
+    display: none;
 }
 .header__mobile-search-icon {
     font-size: 2.6rem;
@@ -909,7 +910,7 @@ margin: 0 8px;
  }
  /* mobile category */
  .mobile-category {
-
+    display: none;
  }
  .mobile-category__list {
     display: flex;
@@ -951,7 +952,7 @@ margin: 0 8px;
     width: 110px;
     height: calc(var(--line-height) * 2);
     overflow: hidden;
-    
+    padding: 0 6px;
     display: block;
     display: -webkit-box;
     -webkit-box-orient: vertical;
