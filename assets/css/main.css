@@ -1,8 +1,12 @@
+.app {
+    overflow: hidden;
+}
 .header{
     height: var(--header-height);
     background-image: linear-gradient(0,#fe6333,#f6402e);
     
 }
+
 .header__navbar{
     display: flex;
     justify-content: space-between;
@@ -205,6 +209,57 @@
 
 .header__qr-download-img {
   height: 20px;
+}
+/* header sort bar */
+.header__sort-bar {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    left: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white-color);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    display: none;
+
+}
+   
+.header__sort-item {
+    flex: 1;
+}
+.header__sort-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+    height: 100%;
+    line-height: var(--header-sort-bar-height);
+    text-align: center;
+    
+    
+ 
+}
+.header__sort-item:first-child .header__sort-link::after 
+{
+    display: none;
+}
+.header__sort-item--active.header__sort-link
+{
+    color: var(--primary-color);
+}
+.header__sort-link::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    height: 60%;
+    border-left: 1px solid #ccc;
+
 }
 /* 2 cachs lấy ra class giống nhau
 .header_qr-link:nth-child(n)n là thứ tự bất kì
@@ -437,8 +492,22 @@ display: flex;
 align-items: center;
 margin: 0 0 0 4px;
 }
+.header__mobile-search {
+    padding:0 12px;
+}
+.header__mobile-search-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+}
 .header__logo {
     width: 200px;
+}
+.header__logo-link {
+    display: block;
+    line-height: 0;
+}
+.header__search-checkbox:checked ~  .header__search {
+    display: flex;
 }
 .shopee-svg-icon {
     width: 150px;
@@ -480,7 +549,7 @@ margin: 0 0 0 4px;
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
-    height: 30vh;
+    max-height: 30vh;
     overflow-y: auto;
 }
 .header__cart-item {
@@ -779,6 +848,7 @@ margin: 0 8px;
  } 
  .app__container {
     background-color: rgb(248, 244, 244);
+    margin: 0 4px;
  }
  .app__content {
     padding-top: 24px;
@@ -844,6 +914,7 @@ margin: 0 8px;
     padding: 12px 22px;
     border-radius: 2px;
 }
+
 .select-input {
     z-index: 1;
 }
@@ -1081,6 +1152,7 @@ i.home-product-item__like-icon-fill {
 }
 .home-product__pagination {
     margin: 48px 0 32px 0;
+    padding-left: 0;
 }
 /* footer */
 .footer {

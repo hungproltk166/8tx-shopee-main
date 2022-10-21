@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./assets/css/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
       <!-- lt less than để dùng cho responsive
     gt grater than -->
     <!-- chạy trên trình duyệt IE  -->
@@ -21,9 +23,8 @@
 <body>
    <div class="app">
    <header class="header">
-    <div class="grid">
-
-        <nav class="header__navbar">
+    <div class="grid wide">
+        <nav class="header__navbar hide-on-mobile-tablet">
             <ul class="header__navbar-list">
                 <li class="header__navbar-list-item header__navbar-list-item--has-qr header__navbar-list-item--separate">
                     vào cửa hàng trên ứng dụng 8tx-shop
@@ -133,7 +134,10 @@
         </nav>
         <!-- header with search -->
             <div class="header-with-search">
-                <div class="header__logo">
+                <label for="mobile-search-checkbox" class="header__mobile-search">
+                    <i class=" header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                </label>
+                <div class="header__logo hide-on-tablet">
                    <a href="/" class="header__logo-link">
                     <svg viewBox="0 0 192 65" class="shopee-svg-icon header-with-search__shopee-logo icon-shopee-logo">
                         <g fill-rule="evenodd">
@@ -145,7 +149,8 @@
                     </svg>
                    </a>
                 </div>
-                <div class="header__search">
+                <input type="checkbox" name="" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+                <div class="header__search ">
                     <div class="header__search-input-wrap">
                         <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
                         <!-- search history -->
@@ -348,11 +353,25 @@
 
 
     </div>
+    <ul class="header__sort-bar">
+        <li class="header__sort-item">
+            <a href="" class="header__sort-link">liên quan</a>
+        </li>
+        <li class="header__sort-item">
+            <a href="" class="header__sort-link header__sort-item--active">mới nhất</a>
+        </li>
+        <li class="header__sort-item">
+            <a href="" class="header__sort-link">bán chạy </a>
+        </li>
+        <li class="header__sort-item">
+            <a href="" class="header__sort-link">Giá</a>
+        </li>
+    </ul>
    </header>
     <div class="app__container">
-       <div class="grid">
-        <div class="grid__row app__content">
-            <div class="grid__column-2">
+       <div class="grid wide">
+        <div class="row sm-gutter app__content">
+            <div class="col l-2 m-0 c-0">
                 <nav class="category">
                     <h3 class=" category__heading">
                         Danh mục
@@ -370,8 +389,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="grid__column-10">
-                <div class="home-filter">
+            <div class="col l-10 m-12 c-12">
+                
+                <div class="home-filter hide-on-mobile-tablet">
                     <span class="home-filter__label">sắp xếp theo</span>
                     <button class="home-filter__btn btn">phổ biến</button>
                     <button class="home-filter__btn btn btn--primary ">mới nhất</button>
@@ -405,9 +425,9 @@
                     </div>
                 </div>
                 <div class="home-product ">
-                    <div class="grid__row">
+                    <div class="row sm-gutter">
                         <!-- product item -->
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -450,7 +470,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -493,7 +513,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -536,7 +556,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -579,7 +599,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -622,7 +642,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -665,7 +685,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -708,7 +728,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -751,7 +771,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -794,7 +814,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -837,7 +857,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -880,7 +900,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -923,7 +943,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -966,7 +986,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -1009,7 +1029,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid__column-2-4  ">
+                        <div class=" col l-2-4 m-4 c-12 ">
                             <a href="#" class="home-product-item">
                                 <div class="home-product-item__img" style="background-image: url(https://gearopen.com/wp-content/uploads/2020/10/Untitled-119.png);"></div>
                                 <h5 class="home-product-item__name">Máy ảnh kỹ thuật số Fujifilm X-S10 A compact mirrorless camera body that’s packed with cutting-edge technologies to bring out your best as a photographer.</h5>
@@ -1095,9 +1115,9 @@
        </div>
     </div>
     <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="footer__bottom"></div>
-                <div class="grid__row">
+                <div class="row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
@@ -1198,7 +1218,7 @@
                
             </div>
             <div class="footer__bottom-grid">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty 8tx-shop</p>
                 </div>
             </div>
